@@ -1,0 +1,74 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Inventory/InventoryStyle.uss?fileID=7433441132597879392&amp;guid=d61d9ecb079ef1543a917d5c3ab9f036&amp;type=3#InventoryStyle" />
+    <ui:VisualElement name="Screen" style="flex-grow: 1; justify-content: flex-end;">
+        <ui:VisualElement name="Inventory" style="background-color: rgb(29, 29, 29); height: 40%;">
+            <ui:VisualElement name="Header" class="header" style="flex-direction: row; height: 10%; min-height: 50px; max-height: 100px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-bottom-color: rgb(255, 124, 0); border-bottom-width: 1px;">
+                <ui:VisualElement name="HeaderLeft" style="flex-grow: 1; align-items: flex-start; padding-left: 10px; padding-right: 10px; padding-top: 0; padding-bottom: 0; flex-direction: row;">
+                    <ui:Label text="INVENTORY" display-tooltip-when-elided="true" name="HeaderText" style="flex-grow: 1; -unity-text-align: middle-left; height: 100%; color: rgb(210, 210, 210);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="HeaderRight" style="align-items: flex-end; flex-grow: 1; padding-left: 10px; padding-right: 10px; padding-top: 0; padding-bottom: 0; flex-direction: row-reverse;">
+                    <ui:VisualElement name="CurrencyContainer" style="flex-grow: 0; height: 100%; flex-direction: row-reverse; padding-left: 32px; align-items: center; justify-content: flex-start; padding-right: 10px; width: 25%; min-width: 128px;">
+                        <ui:Label text="1337" display-tooltip-when-elided="true" name="CurrencyValue" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(210, 210, 210); align-items: stretch;" />
+                        <ui:VisualElement name="CurrencyIconContainer" style="flex-grow: 1; min-width: 32px; max-width: 32px;">
+                            <ui:VisualElement name="CurrencyIcon" style="background-image: url(&apos;project://database/Assets/Sprites/UI/Icons/Currency/coin_silver.png?fileID=2800000&amp;guid=c1505e132ce93264a997a6265a345503&amp;type=3#coin_silver&apos;); width: 100%; height: 100%; flex-grow: 1; padding-top: 5px; padding-bottom: 5px; -unity-background-scale-mode: scale-to-fit; flex-shrink: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="WeightContainer" style="flex-grow: 1; justify-content: flex-end; flex-direction: row; height: 100%; align-items: center;">
+                        <ui:VisualElement name="WeightIcon" style="background-image: url(&apos;project://database/Assets/Sprites/UI/Icons/CleanVectorIcons/T_5_coin_bag2_.png?fileID=2800000&amp;guid=95ffc4f28f629d045b5a5ded06e879fd&amp;type=3#T_5_coin_bag2_&apos;); width: 28px; height: 28px; padding-right: 0; margin-right: 5px;" />
+                        <ui:VisualElement name="WeightBarContainer" style="flex-grow: 1; max-width: 150px; min-width: 50px; height: 100%;">
+                            <ui:Label text="Weight" display-tooltip-when-elided="true" name="WeightBarLabelTop" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 10%; -unity-background-image-tint-color: rgb(255, 255, 255); color: rgb(210, 210, 210);" />
+                            <ui:VisualElement name="WeightBarBorder" style="height: auto; width: auto; min-width: 50px; border-left-color: rgb(255, 128, 0); border-right-color: rgb(255, 128, 0); border-top-color: rgb(255, 128, 0); border-bottom-color: rgb(255, 128, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; min-height: 10px; flex-grow: 1;">
+                                <ui:VisualElement name="WeightBar" style="width: 75%; height: 100%; background-color: rgb(152, 89, 26); border-left-color: rgb(152, 89, 26); border-right-color: rgb(152, 89, 26); border-top-color: rgb(152, 89, 26); border-bottom-color: rgb(152, 89, 26); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 2px; border-bottom-left-radius: 2px;" />
+                            </ui:VisualElement>
+                            <ui:Label display-tooltip-when-elided="true" name="WeightBarLabelValue" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 10%; color: rgb(210, 210, 210);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Body" style="flex-grow: 1; flex-direction: row-reverse; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; height: 100%;">
+                <ui:VisualElement name="ItemDetailContainer" style="width: 24%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; border-left-color: rgb(255, 128, 0); border-right-color: rgb(255, 128, 0); border-top-color: rgb(255, 128, 0); border-bottom-color: rgb(255, 128, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; flex-grow: 0; max-width: 24%; min-width: 24%; flex-shrink: 0; height: 100%;">
+                    <ui:VisualElement name="ItemDetailHeader" style="flex-direction: row; flex-shrink: 0; height: 10%; min-height: 16px;">
+                        <ui:Label text="ITEM NAME" display-tooltip-when-elided="true" name="ItemDetailName" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 15%; flex-grow: 1; color: rgb(210, 210, 210);" />
+                        <ui:VisualElement name="CurrencyContainer" style="flex-grow: 0; height: 100%; flex-direction: row-reverse; padding-left: 32px; align-items: center; justify-content: flex-end;">
+                            <ui:Label text="1337" display-tooltip-when-elided="true" name="ItemDetailCost" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 18%; color: rgb(210, 210, 210);" />
+                            <ui:VisualElement name="CurrencyIconContainer" style="flex-grow: 1; min-width: 32px; max-width: 32px;">
+                                <ui:VisualElement name="CurrencyIcon" style="background-image: url(&apos;project://database/Assets/Sprites/UI/Icons/Currency/coin_silver.png?fileID=2800000&amp;guid=c1505e132ce93264a997a6265a345503&amp;type=3#coin_silver&apos;); width: 100%; height: 100%; flex-grow: 1; padding-top: 5px; padding-bottom: 5px; -unity-background-scale-mode: scale-to-fit; flex-shrink: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:ScrollView name="ItemDetailView" style="flex-grow: 1; max-height: 65%; padding-top: 10px; height: 65%; min-height: 65%;">
+                        <ui:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec tempor tellus. Integer a lorem id arcu condimentum porttitor. Aenean vitae ante lectus. Morbi in libero vitae lorem blandit mollis eleifend ac mauris." display-tooltip-when-elided="true" name="ItemDetailDescription" style="flex-grow: 1; padding-top: 0; font-size: 16%; white-space: normal; -unity-text-align: upper-left; color: rgb(210, 210, 210); flex-shrink: 0; padding-left: 0; padding-right: 0; padding-bottom: 0; height: 100%;" />
+                    </ui:ScrollView>
+                    <ui:VisualElement name="ItemDetailButtonContainer" style="height: 10%; max-height: 64px; flex-direction: column; flex-grow: 1; justify-content: flex-end; flex-shrink: 0; min-height: 32px;">
+                        <ui:Button text="CREATE" display-tooltip-when-elided="true" name="ItemDetailButtonCreate" class="button" style="position: relative; width: 100%; height: 50%; flex-grow: 0; font-size: 18%;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Inventory" style="flex-grow: 1; align-items: center; justify-content: center; margin-right: 10px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                    <ui:VisualElement name="InventoryGrid" style="flex-direction: row; flex-wrap: wrap; flex-grow: 1; width: 100%; height: 100%;">
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                        <ui:VisualElement name="InventorySlot" class="inventory_slot" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Footer" class="footer" style="border-top-width: 1px; min-height: 0; max-height: none; height: auto; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
